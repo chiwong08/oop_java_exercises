@@ -78,6 +78,11 @@ class LionCat extends Cats {
 }
 
 class CheetahCat extends Cats {
+    // without this, the abstract Cats class would need to have both constructors.
+    // public CheetahCat() {
+    //    super("wild", 800);
+    // }
+
     public String eat() {
         return ("Zzzzzzz");
     }
