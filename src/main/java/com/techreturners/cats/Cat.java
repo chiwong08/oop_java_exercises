@@ -17,7 +17,7 @@ interface Cat {
 }
 
 abstract class Cats implements Cat {
-    protected boolean asleep;
+    protected boolean asleep = false;
     protected String type;
     protected int averageHeight;
 
@@ -44,7 +44,8 @@ abstract class Cats implements Cat {
 
 class DomesticCat extends Cats {
     public DomesticCat() {
-        this.asleep = false;
+        super();
+        // this.asleep = false;
         this.type = "domestic";
         this.averageHeight = 23;
     }
@@ -55,7 +56,9 @@ class DomesticCat extends Cats {
 }
 
 class LionCat extends Cats {
+    
     public LionCat() {
+        // super('wild', 1100);
         this.type = "wild";
         this.averageHeight = 1100;
     }
