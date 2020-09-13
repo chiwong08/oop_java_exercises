@@ -21,6 +21,15 @@ abstract class Cats implements Cat {
     protected String type;
     protected int averageHeight;
 
+    public Cats() {
+
+    }
+
+    public Cats(String type, int height) {
+        this.type = type;
+        this.averageHeight = height;
+    }
+
     public boolean isAsleep() {
         return this.asleep;
     }
@@ -44,10 +53,10 @@ abstract class Cats implements Cat {
 
 class DomesticCat extends Cats {
     public DomesticCat() {
-        super();
+        super("domestic", 23);
         // this.asleep = false;
-        this.type = "domestic";
-        this.averageHeight = 23;
+        // this.type = "domestic";
+        // this.averageHeight = 23;
     }
 
     public String eat() {
@@ -58,9 +67,9 @@ class DomesticCat extends Cats {
 class LionCat extends Cats {
     
     public LionCat() {
-        // super('wild', 1100);
-        this.type = "wild";
-        this.averageHeight = 1100;
+        super("wild", 1100);
+        // this.type = "wild";
+        // this.averageHeight = 1100;
     }
 
     public String eat() {
